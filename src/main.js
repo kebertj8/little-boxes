@@ -1,5 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import Boxes from '.\\components\\Box'
 
 import style from "./styles/app.scss"
 
@@ -15,7 +16,12 @@ let title = "I Am the Wrapper"
 
   ReactDOM.render(
   <div>
-    <Wrapper body={body} title={title}/>
+    <Boxes
+      boxClass='wrapper'
+      header={title}
+      paragraph={body}
+      picture={`https://s3.amazonaws.com/horizon-production/images/react-clever-ees.png`}
+    />
   </div>,
   document.getElementById("app")
 )
